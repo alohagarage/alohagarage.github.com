@@ -13,6 +13,9 @@
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <link rel="stylesheet/less" href="static/lib/less/bootstrap.less" media="all" />
     <script src="static/js/less-1.3.0.min.js"></script>
+    <script src="/static/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="/static/lib/codemirror.css">
+    <script src="/static/lib/formatting.js"></script>
     <title>It's Aloha Time</title>
 </head>
 <body>
@@ -20,11 +23,17 @@
         <div class="navbar-inner">
             <div id="navbar-container" class="container">
                 <a class="brand" href="/">
-                    Aloha Time
+                  <strong><span class="logo">{LRI} </span></strong>Query Editor
                 </a>
                 <ul class="nav pull-right">
-                  <li></li>
-                  <li></li>
+                  <li>
+                    <a id="hostname-id" href="#">Hostname</a>
+                    <input id="hostname-input"type="text" style="display: none"></input>
+                  </li>
+                  <li>
+                    <a id="port-id" href="#">Port</a>
+                    <input id="port-input"type="text" style="display: none"></input>
+                  </li>
                     <li class="dropdown" id="settings-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- <span><i class="icon-cog icon-white"></i></span> -->
@@ -32,10 +41,19 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
+                            <form id="settings-form" method="post" action="/settings">
+                            <input name="hostname" id="hostname" type="text" placeholder="lriserver.com">
+                            <input name="port" id="port" type="text" placeholder="8000">
+                            <button id="settings-submit" type="submit" class="pull-right btn btn-primary">
+                                Save Settings
+                            </button>
+                            <button id="settings-cancel" class="dropdown-toggle pull-right btn" data-toggle="dropdown">
+                               Close
+                            </button>
+                            </form>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-</body>

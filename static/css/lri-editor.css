@@ -1,0 +1,70 @@
+        body {
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 1000px
+        }
+
+        #navbar-container {
+            width: 1000px
+        }
+
+        #settings-form {
+            margin: 10px 12px 0 12px
+        }
+
+        /*
+        .dropdown-input:first-child {
+            margin: 10px 12px 0 12px
+        }
+        */
+        .statusError {
+          color: red;
+        }
+
+        textarea {
+            margin-top: 10px;
+            width: 99%;
+            height: 91%;
+            border: none;
+        }
+
+        .bg1 {
+            background-color: #505050;
+        }
+
+        .bg2 {
+            background-color: #707070;
+        }
+
+        .bg3 {
+            background-color: #808080;
+        }
+
+        .fixed-height {
+            height: 520px
+        }
+
+        .bordered {
+        }
+
+        .btn-mini {
+            margin: 5px 0 5px 0;
+        }
+
+        #right-column {
+            border-left: 1px solid lightgrey;
+            padding-left: 20px;
+            height: 550px;
+            overflow: auto;
+        }
+        
+        .CodeMirror {
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .CodeMirror-scroll {
+            height: 500px
+        }
