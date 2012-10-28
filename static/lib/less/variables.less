@@ -56,8 +56,9 @@
 // -------------------------
 //@bodyBackground:        @milotic5;
 //@bodyBackground:        gradient(@milotic5, @milotic5, @white);
-@bodyBackground:        lighten(@mint5, 20%);
-@textColor:             @grayDark;
+//@bodyBackground:        lighten(@mint5, 20%);
+@bodyBackground:        @white;
+@textColor:             @grayLighter;
 
 
 // Links
@@ -72,19 +73,20 @@
 // -------------------------
 //@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 //@sansFontFamily:        'Lekton', Helvetica, Arial, sans-serif;
-@sansFontFamily:        'Arvo', Georgia, Times, serif;
+@serifFontFamily:        'Arvo', Georgia, Times, serif;
 //@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 //@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-@serifFontFamily:       'PT Sans', Helvetica, Arial, sans-serif;
+@sansFontFamily:       'PT Sans', Helvetica, Arial, sans-serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          13px;
+@baseFontSize:          14px;
 //@baseFontFamily:        @sansFontFamily;
-@baseFontFamily:        @serifFontFamily;
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        18px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+//@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    @altFontFamily;
 @headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
@@ -175,9 +177,9 @@
 
 // Navbar
 // -------------------------
-@navbarHeight:                    48px;
-@navbarBackground:                @mint1;
-@navbarBackgroundHighlight:       lighten(@mint1, 8%);
+@navbarHeight:                    50px;
+@navbarBackground:                @white;
+@navbarBackgroundHighlight:     darken(@white, 20%);
 
 @navbarText:                      @grayLight;
 @navbarLinkColor:                 @grayLight;
@@ -193,7 +195,7 @@
 @navbarSearchPlaceholderColor:    #ccc;
 //@navbarBrandColor:                @navbarLinkColor;
 //@navbarBrandColor:                @white;
-@navbarBrandColor:                @bodyBackground;
+@navbarBrandColor:                @grayDarker;
 
 
 // Hero unit
