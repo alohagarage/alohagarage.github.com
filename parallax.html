@@ -1,0 +1,93 @@
+<html>
+<head>
+  <script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.6.1.min.js">
+  </script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Parallax Test</title>
+  <style type="text/css" media="all">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #home {
+      background: url(images/home.jpg) 50% 0 repeat fixed;
+      height: 1000px;
+      min-height: 1000px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1920px;
+      position: relative;
+    }
+    #home article {
+      height: 458px;
+      position: absolute;
+      text-align: center;
+      top: 150px;
+      width: 100%
+    }
+    #about {
+      background: url(images/about.jpg) 50% 0 no-repeat;
+      height: 1000px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1920px;
+      position: relative;
+      -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+      min-height: 1000px
+    }
+    #about article {
+      height: 458px;
+      position: absolute;
+      text-align: center;
+      top: 150px;
+      width: 100%
+    }
+
+    #home article {
+      background: url("images/intro.png") no-repeat scroll center top transparent; 
+      height: 458px; 
+      position: absolute; 
+      text-indent: -9999px; 
+      top: 291px; 
+      width: 100%; }
+
+    #about article { 
+      background: url("images/parallax.png") no-repeat scroll center top transparent; 
+      height: 458px; 
+      position: absolute; 
+      text-indent: -9999px; 
+      top: 291px; 
+      width: 100%; 
+    }
+
+  </style>
+  
+</head>
+<body>
+  <section id="home" data-type="background" data-speed="10">
+    <article>
+      I am absolutely positioned
+    </article>
+  </section>
+  <section id="about" data-type="background" data-speed="10">
+    <article>
+      Simple Parallax Scroll
+    </article>
+  </section>
+</body>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+  $window = $(window);
+      $('section[data-type="background"]').each(function() {
+        var $bgobj = $(this);
+        $(window).scroll(function() {
+          var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+          var coords = '50% ' + yPos + 'px';
+          $bgobj.css({ backgroundPosition: coords });
+          });
+        });
+      });
+</script>
+</html>
