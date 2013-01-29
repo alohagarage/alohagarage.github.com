@@ -2,4 +2,4 @@
 title: TEST
 ---
 
-[[Link]]
+[Link.html]
